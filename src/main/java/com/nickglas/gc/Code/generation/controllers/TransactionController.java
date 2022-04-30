@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/transactions")
+@RequestMapping("/transactions")
 @Slf4j
 public class TransactionController {
 
@@ -23,7 +23,6 @@ public class TransactionController {
 
     @GetMapping
     public ResponseEntity<List<Transaction>> getTransactions(){
-        log.info("test");
         return ResponseEntity.ok().body(transactionService.getTransactions());
     }
 
