@@ -8,6 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 @Slf4j
@@ -28,6 +30,11 @@ public class CodeGenerationApplication {
 			log.info("Created test transaction {}" , Trans3.toString());
 			//transactionService.createTransaction(new TransactionTransfer("ibanfrom", "ibanto", TransactionType.transaction));
 		};
+	}
+
+	@Bean
+	PasswordEncoder passwordEncoder(){
+		return new BCryptPasswordEncoder();
 	}
 
 }

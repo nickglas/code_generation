@@ -1,4 +1,4 @@
-package com.nickglas.gc.Code.generation.repositories;
+package com.nickglas.gc.Code.generation.appRunner;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
