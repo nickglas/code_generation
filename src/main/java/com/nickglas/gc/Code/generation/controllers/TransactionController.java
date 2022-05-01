@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/transactions")
+@RequestMapping("/v1/transactions")
 @Slf4j
 public class TransactionController {
 
